@@ -1,5 +1,4 @@
 import React from 'react';
-
 import c1 from '../asserts/c1.jpg'
 import c2 from '../asserts/c2.jpg'
 import c3 from '../asserts/c3.jpg'
@@ -29,13 +28,6 @@ import c27 from '../asserts/c27.jpg'
 import c28 from '../asserts/c28.jpg'
 import c29 from '../asserts/c29.jpg'
 import c30 from '../asserts/c30.jpg'
-
-
-
-
-
-
-
 
 
 function CategorySpecials() {
