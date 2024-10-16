@@ -111,7 +111,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlekids} style={{ cursor: 'pointer' }}>
         <img src={c7} alt="Party Wear" />
         <div class="card-info">
           <h3>Party Wear</h3>
@@ -119,7 +119,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlekids} style={{ cursor: 'pointer' }}>
         <img src={c8} alt="Outerwear" />
         <div class="card-info">
           <h3>Outerwear</h3>
@@ -127,7 +127,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlekids} style={{ cursor: 'pointer' }}>
         <img src={c9} alt="Accessories" />
         <div class="card-info">
           <h3>Accessories</h3>
@@ -135,7 +135,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlekids} style={{ cursor: 'pointer' }}>
         <img src={c10} alt="Sleepwear" />
         <div class="card-info">
           <h3>Sleepwear</h3>
@@ -152,7 +152,7 @@ function CategorySpecials() {
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }}>
         <img src={c12} alt="WFH Casual Wear" />
         <div class="card-info">
           <h3>WFH Casual Wear</h3>
@@ -161,7 +161,7 @@ function CategorySpecials() {
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }}>
         <img src={c13} alt="WFH Casual Wear" />
         <div class="card-info">
           <h3>WFH Casual Wear</h3>
@@ -170,7 +170,7 @@ function CategorySpecials() {
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }}>
         <img src={c14} alt="WFH Casual Wear" />
         <div class="card-info">
           <h3>WFH Casual Wear</h3>
@@ -179,7 +179,7 @@ function CategorySpecials() {
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }}>
         <img src={c15} alt="WFH Casual Wear" />
         <div class="card-info">
           <h3>WFH Casual Wear</h3>
@@ -188,7 +188,7 @@ function CategorySpecials() {
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }}>
         <img src={c16} alt="WFH Casual Wear" />
         <div class="card-info">
           <h3>WFH Casual Wear</h3>
@@ -197,7 +197,7 @@ function CategorySpecials() {
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }}>
         <img src={c17} alt="WFH Casual Wear" />
         <div class="card-info">
           <h3>WFH Casual Wear</h3>
@@ -206,7 +206,7 @@ function CategorySpecials() {
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }}>
         <img src={c18} alt="Ethnic Wear" />
         <div class="card-info">
           <h3>Ethnic Wear</h3>
@@ -214,7 +214,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }} >
         <img src={c19} alt="WFH Casual Wear" />
         <div class="card-info">
           <h3>Casual Wear</h3>
@@ -222,7 +222,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewomen} style={{ cursor: 'pointer' }}>
         <img src={c20} alt="Formal Wear" />
         <div class="card-info">
           <h3>Formal Wear</h3>
@@ -238,7 +238,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewedding} style={{ cursor: 'pointer' }}>
         <img src={c22} alt="Footwear" />
         <div class="card-info">
           <h3>WeddingCollection</h3>
@@ -246,7 +246,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewedding} style={{ cursor: 'pointer' }}>
         <img src={c23} alt="Kidswear" />
         <div class="card-info">
           <h3>WeddingCollection</h3>
@@ -254,7 +254,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewedding} style={{ cursor: 'pointer' }}>
         <img src={c24} alt="Party Wear" />
         <div class="card-info">
           <h3>WeddingCollection</h3>
@@ -262,7 +262,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewedding} style={{ cursor: 'pointer' }}>
         <img src={c25} alt="Outerwear" />
         <div class="card-info">
           <h3>WeddingCollection</h3>
@@ -270,7 +270,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewedding} style={{ cursor: 'pointer' }}>
         <img src={c29} alt="Accessories" />
         <div class="card-info">
           <h3>Eyewear</h3>
@@ -278,7 +278,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewedding} style={{ cursor: 'pointer' }}>
         <img src={c27} alt="Sleepwear" />
         <div class="card-info">
           <h3>Watches</h3>
@@ -286,7 +286,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewedding} style={{ cursor: 'pointer' }}>
         <img src={c28} alt="Denim" />
         <div class="card-info">
           <h3>Handbags</h3>
@@ -294,7 +294,7 @@ function CategorySpecials() {
           <a href="#" class="shop-now">Shop Now</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" onClick={handlewedding} style={{ cursor: 'pointer' }}>
         <img src={c30} alt="Loungewear" />
         <div class="card-info">
           <h3>Loungewear</h3>
