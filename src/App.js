@@ -61,14 +61,6 @@ function App() {
           <>
             <Navbar />
             <Sidebar/>
-            <KidsCollections />
-            <Footer /> 
-          </>
-        } />
-         <Route path="/wedding-collections" element={
-          <>
-            <Navbar />
-            <Sidebar/>
             <WeddingCollections />
             <Footer /> 
           </>

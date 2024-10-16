@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 import w1 from '../asserts/weddingimg/w1.jpg'
 import w2 from '../asserts/weddingimg/w2.jpg'
 import w3 from '../asserts/weddingimg/w3.jpg'
@@ -14,10 +12,6 @@ import w9 from '../asserts/weddingimg/w9.jpg'
 import w10 from '../asserts/weddingimg/w10.jpg'
 import w11 from '../asserts/weddingimg/w11.jpg'
 import w12 from '../asserts/weddingimg/w12.jpg'
-
-
-
-
 
 
 
