@@ -24,7 +24,7 @@
     right: 20px;
     z-index: 11;
     cursor: pointer;
-    color: #9e9797;
+    color: #adaaaa;
   }
   
   .side-navbar {
@@ -689,15 +689,15 @@
   text-decoration: underline;
   }
 
-.men-collections-container {
+ .men-collections-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
   margin-top: 30px;
-}
+ }
 
-.collection-card {
+ .collection-card {
   width: 300px;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -706,39 +706,39 @@
   background-color: #f9f9f9;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+ }
 
-.collection-card:hover {
+ .collection-card:hover {
   transform: translateY(-10px); 
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
+ }
 
-.collection-card img {
+ .collection-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
-}
+ }
 
-.collection-card:hover img {
+ .collection-card:hover img {
   transform: scale(1.05); 
-}
+ }
 
-.men-collection-info {
+ .men-collection-info {
   margin-top: 10px;
-}
+ }
 
-.men-collection-info h3 {
+ .men-collection-info h3 {
   font-size: 20px;
   color: #333;
-}
+ }
 
-.men-collection-info p {
+ .men-collection-info p {
   color: #ff6347;
   font-weight: bold;
-}
+ }
 
-.men-collection-shop-now {
+ .men-collection-shop-now {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 15px;
@@ -747,8 +747,8 @@
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-}
+ }
 
-.men-collection-shop-now:hover {
+ .men-collection-shop-now:hover {
   background-color: #0056b3;
-}
+ }
