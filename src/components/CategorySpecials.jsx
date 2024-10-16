@@ -46,11 +46,11 @@ function CategorySpecials() {
   }
 
   const handlekids = () => {
-    navigate('/women-collections'); 
+    navigate('/kids-collections'); 
   }
 
   const handlewedding = () => {
-    navigate('/women-collections'); 
+    navigate('/wedding-collections'); 
   }
 
 
