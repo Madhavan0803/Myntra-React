@@ -18,22 +18,35 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /*side navbar*/
+  .menu-bar {
+    position: absolute; 
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+    cursor: pointer;
+    color: #9e9797;
+  }
+  
   .side-navbar {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 50%;
     height: 100%;
-    background-color: #1D232C;
-    color: #E2E1E1;
-    margin-left: -60%;
-    transition-duration: 1s;
+    background-color: #1d232c;
+    color: #f7f0f0;
+    margin-right: -60%; 
+    transition: margin-right 1s ease;
     z-index: 10;
     padding: 20px;
   }
+  
+  .side-navbar.open {
+    margin-right: 0; 
+  }
+  
   .side-navbar :first-child {
-    text-align: right
+    text-align: left;
   }
   
   .side-navbar-link {
@@ -42,18 +55,23 @@
   
   .side-navbar-links a {
     text-decoration: none;
-    color: #E2E1E1;
+    color: #e2e1e1;
   }
   
   .side-navbar-links a:hover {
     text-decoration: underline;
-    color: #E2E1E1;
+    color: #e2e1e1;
   }
+  
   
   /* For small screens */
   @media (max-width: 768px) {
     .navbar-right {
       display: none;
+    }
+
+    .menu-bar {
+      display: none; 
     }
   
     .navbar-right.active {

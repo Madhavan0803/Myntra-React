@@ -564,21 +564,7 @@ function Navbar() {
             <span>Bag</span>
           </div>
         </a>
-        <div class="menu-bar">
-          <i class="fas fa-bars"></i>
         </div>
-      </div>
-
-      <div class="side-navbar" id="sideNavbar">
-        <p >
-          <i id="side-navbar-close" class="fa-solid fa-xmark"></i>
-        </p>
-        <div class="side-navbar-links">
-          <p class="side-navbar-link"><a href="">Profike</a></p>
-          <p class="side-navbar-link"><a href="">Wishlist</a></p>
-          <p class="side-navbar-link"><a href="">Bag</a></p>
-        </div>
-      </div>
     </nav>
   )
 }

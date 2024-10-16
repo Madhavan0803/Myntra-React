@@ -10,6 +10,7 @@ import MenCollections from './components/Men Collections';
 import WomenCollections from './components/Women Collections';
 import KidsCollections from './components/Kids Collections';
 import WeddingCollections from './components/Wedding Collections';
+import Sidebar from './components/Sidebar';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={
           <>
             <Navbar />
+            <Sidebar/>
             <Promobanner />
             <Container />
             <Autoscroll />
@@ -33,6 +35,7 @@ function App() {
         <Route path="/men-collections" element={
           <>
             <Navbar />
+            <Sidebar/>
             <MenCollections />
             <Footer /> 
           </>
@@ -41,6 +44,7 @@ function App() {
         <Route path="/women-collections" element={
           <>
             <Navbar />
+            <Sidebar/>
             <WomenCollections />
             <Footer /> 
           </>
@@ -48,6 +52,7 @@ function App() {
         <Route path="/kids-collections" element={
           <>
             <Navbar />
+            <Sidebar/>
             <KidsCollections />
             <Footer /> 
           </>
@@ -55,7 +60,16 @@ function App() {
          <Route path="/wedding-collections" element={
           <>
             <Navbar />
+            <Sidebar/>
             <KidsCollections />
+            <Footer /> 
+          </>
+        } />
+         <Route path="/wedding-collections" element={
+          <>
+            <Navbar />
+            <Sidebar/>
+            <WeddingCollections />
             <Footer /> 
           </>
         } />
