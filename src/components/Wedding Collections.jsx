@@ -7,7 +7,7 @@ import c3 from '../asserts/c3.jpg'
 
 
 
-function MenCollections(){
+function WeddingCollections(){
   return(
     <div className="men-collections-container">
   <div className="collection-card">
@@ -122,4 +122,4 @@ function MenCollections(){
   )
 }
 
-export default MenCollections;
+export default WeddingCollections;
