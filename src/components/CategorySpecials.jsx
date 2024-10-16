@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import c1 from '../asserts/c1.jpg'
 import c2 from '../asserts/c2.jpg'
 import c3 from '../asserts/c3.jpg'
@@ -30,12 +32,21 @@ import c29 from '../asserts/c29.jpg'
 import c30 from '../asserts/c30.jpg'
 
 
+
 function CategorySpecials() {
+
+  const navigate = useNavigate(); 
+
+  const handleNavigate = () => {
+    navigate('/men-collections'); 
+  }
+
+
   return (
     <div class="category-specials">
     <h1>Category Specials</h1>
     <div class="cards-container">
-      <div class="card">
+      <div className="card" onClick={handleNavigate} style={{ cursor: 'pointer' }}> 
         <img src={c1} alt="Ethnic Wear" />
         <div class="card-info">
           <h3>Ethnic Wear</h3>
@@ -283,5 +294,6 @@ function CategorySpecials() {
   </div>
   )
 }
+
 
 export default CategorySpecials

@@ -6,20 +6,37 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Offerbanner from './components/Offerbanner';
 import Promobanner from './components/Promobanner';
+import MenCollections from './components/Men Collections';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <>
-  <Navbar/>
-  <Promobanner/>
-  <Container/>
-  <Autoscroll/>
-  <CategorySpecials/>
-  <Offerbanner/>
-  <Footer/>
-  </>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Navbar />
+            <Promobanner />
+            <Container />
+            <Autoscroll />
+            <CategorySpecials />
+            <Offerbanner />
+            <Footer />
+          </>
+        } />
 
+        <Route path="/men-collections" element={
+          <>
+            <Navbar />
+            <MenCollections />
+            <Footer /> 
+          </>
+        } />
+      </Routes>
+    </Router>
   );
 }
 
-export default App;
+export default App
