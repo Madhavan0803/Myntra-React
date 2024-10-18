@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 import k1 from '../asserts/kids/k1.webp'
 import k2 from '../asserts/kids/k2.webp'
 import k10 from '../asserts/kids/k10.webp'
@@ -12,119 +10,37 @@ import k11 from '../asserts/kids/k11.webp'
 import k12 from '../asserts/kids/k12.webp'
 
 
+function KidsCollections({ addToBag }){
+  const items = [
+    { image: k1, title: "Kids Wear 1", price: "30-50% OFF" },
+    { image: k2, title: "Kids Wear 2", price: "20-40% OFF" },
+    { image: k5, title: "Kids Wear 3", price: "15-25% OFF" },
+    { image: k6, title: "Kids Wear 4", price: "25-35% OFF" },
+    { image: k9, title: "Kids Wear 5", price: "10-20% OFF" },
+    { image: k10, title: "Kids Wear 6", price: "30-50% OFF" },
+    { image: k11, title: "Kids Wear 7", price: "5-15% OFF" },
+    { image: k12, title: "Kids Wear 8", price: "10-20% OFF" },
+  ]
 
-
-function KidsCollections(){
+  function handleAddToBag(item) {
+    addToBag(item);
+  }
   return(
-  <div className="men-collections-container">
-  <div className="collection-card">
-    <img src={k1} alt="Ethnic Wear" />
-    <div className="men-collection-info">
-      <h3>Ethnic Wear</h3>
-      <p>50-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k2} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k10} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k5} alt="Ethnic Wear" />
-    <div className="men-collection-info">
-      <h3>Ethnic Wear</h3>
-      <p>50-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k6} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k2} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k5} alt="Ethnic Wear" />
-    <div className="men-collection-info">
-      <h3>Ethnic Wear</h3>
-      <p>50-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k11} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k6} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k10} alt="Ethnic Wear" />
-    <div className="men-collection-info">
-      <h3>Ethnic Wear</h3>
-      <p>50-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k9} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={k12} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-</div>
+    <div className="men-collections-container">
+      {items.map((item) => (
+        <div key={item.id} className="collection-card">
+          <img src={item.image} alt={item.title} />
+          <div className="men-collection-info">
+            <h3>{item.title}</h3>
+            <p>{item.price}</p>
+            <a href="#" className="men-collection-shop-now">Shop Now</a>
+            <a href="#" className="icon-link" onClick={() => handleAddToBag(item)}>
+              <i className="fas fa-shopping-bag icon"></i>
+            </a>
+          </div>
+        </div>
+      ))}
+      </div>
 
   )
 }

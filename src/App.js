@@ -11,63 +11,59 @@ import WomenCollections from './components/Women Collections';
 import KidsCollections from './components/Kids Collections';
 import WeddingCollections from './components/Wedding Collections';
 import Sidebar from './components/Sidebar';
+import BagPage from './components/Bagepage';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 
 function App() {
+  const [bagItems, setBagItems] = useState([]);
+
+  function addToBag(item) {
+    setBagItems((prevItems) => [...prevItems, item])
+    alert(`${item.title} has been added to your Bag!`)
+  }
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={
-          <>
-            <Navbar />
-            <Sidebar/>
-            <Promobanner />
-            <Container />
-            <Autoscroll />
-            <CategorySpecials />
-            <Offerbanner />
-            <Footer />
-          </>
-        } />
+    <Navbar bagItems={bagItems} />
+    <Sidebar />
+    <Routes>
+      <Route path="/" element={
+        <>
+          <Promobanner />
+          <Container />
+          <Autoscroll />
+          <CategorySpecials />
+          <Offerbanner />
+          <Footer />
+        </>
+      } />
 
-        <Route path="/men-collections" element={
-          <>
-            <Navbar />
-            <Sidebar/>
-            <MenCollections />
-            <Footer /> 
-          </>
-        } />
+      <Route path="/men-collections" element={
+        <MenCollections addToBag={addToBag} />
+      } />
 
-        <Route path="/women-collections" element={
-          <>
-            <Navbar />
-            <Sidebar/>
-            <WomenCollections />
-            <Footer /> 
-          </>
-        } />
-        <Route path="/kids-collections" element={
-          <>
-            <Navbar />
-            <Sidebar/>
-            <KidsCollections />
-            <Footer /> 
-          </>
-        } />
-         <Route path="/wedding-collections" element={
-          <>
-            <Navbar />
-            <Sidebar/>
-            <WeddingCollections />
-            <Footer /> 
-          </>
-        } />
-        
-      </Routes>
-    </Router>
+      <Route path="/women-collections" element={
+        <WomenCollections addToBag={addToBag} />
+      } />
+
+      <Route path="/kids-collections" element={
+        <KidsCollections addToBag={addToBag} />
+      } />
+
+      <Route path="/wedding-collections" element={
+        <WeddingCollections addToBag={addToBag} />
+      } />
+
+      <Route path="/bag" element={
+        <BagPage bagItems={bagItems} setBagItems={setBagItems} />
+      } />
+    </Routes>
+    <Footer />
+  </Router>
+
   );
 }
 

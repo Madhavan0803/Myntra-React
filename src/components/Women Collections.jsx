@@ -15,119 +15,41 @@ import w11 from '../asserts/womensimg/w11.jpg'
 import w12 from '../asserts/womensimg/w12.jpg'
 
 
+function WomenCollections({ addToBag }) {
+  const items = [
+    { image: w1, title: "Women's Outfit 1", price: "30-50% OFF" },
+    { image: w2, title: "Women's Outfit 2", price: "20-40% OFF" },
+    { image: w3, title: "Women's Outfit 3", price: "15-25% OFF" },
+    { image: w4, title: "Women's Outfit 4", price: "25-35% OFF" },
+    { image: w5, title: "Women's Outfit 5", price: "10-20% OFF" },
+    { image: w6, title: "Women's Outfit 6", price: "30-50% OFF" },
+    { image: w7, title: "Women's Outfit 7", price: "5-15% OFF" },
+    { image: w8, title: "Women's Outfit 8", price: "10-20% OFF" },
+    { image: w9, title: "Women's Outfit 9", price: "30-50% OFF" },
+    { image: w10, title: "Women's Outfit 10", price: "20-40% OFF" },
+    { image: w11, title: "Women's Outfit 11", price: "15-25% OFF" },
+    { image: w12, title: "Women's Outfit 12", price: "25-35% OFF" },
+  ]
 
-
-function WomenCollections(){
+  function handleAddToBag(item) {
+    addToBag(item);
+  }
   return(
     <div className="men-collections-container">
-  <div className="collection-card">
-    <img src={w1} alt="Ethnic Wear" />
-    <div className="men-collection-info">
-      <h3>Ethnic Wear</h3>
-      <p>50-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
+      {items.map((item) => (
+        <div key={item.id} className="collection-card">
+          <img src={item.image} alt={item.title} />
+          <div className="men-collection-info">
+            <h3>{item.title}</h3>
+            <p>{item.price}</p>
+            <a href="#" className="men-collection-shop-now">Shop Now</a>
+            <a href="#" className="icon-link" onClick={() => handleAddToBag(item)}>
+              <i className="fas fa-shopping-bag icon"></i>
+            </a>
+          </div>
+        </div>
+      ))}
     </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w2} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w3} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w4} alt="Ethnic Wear" />
-    <div className="men-collection-info">
-      <h3>Ethnic Wear</h3>
-      <p>50-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w5} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w6} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w7} alt="Ethnic Wear" />
-    <div className="men-collection-info">
-      <h3>Ethnic Wear</h3>
-      <p>50-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w8} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w9} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w10} alt="Ethnic Wear" />
-    <div className="men-collection-info">
-      <h3>Ethnic Wear</h3>
-      <p>50-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w11} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-
-  <div className="collection-card">
-    <img src={w12} alt="WFH Casual Wear" />
-    <div className="men-collection-info">
-      <h3>WFH Casual Wear</h3>
-      <p>40-80% OFF</p>
-      <a href="#" className="men-collection-shop-now">Shop Now</a>
-    </div>
-  </div>
-</div>
 
   )
 }

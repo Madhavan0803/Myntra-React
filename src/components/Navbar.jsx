@@ -1,7 +1,19 @@
 import React from 'react'
 import myntraLogo from '../asserts/myntra logo.webp'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ bagItems }) {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isBagOpen, setIsBagOpen] = useState(false);
+
+  function handleSearchChange(e) {
+    setSearchTerm(e.target.value);
+  }
+
+  function toggleBag() {
+    setIsBagOpen(!isBagOpen);
+  }
   return (
     <nav class="navbar">
       <div class="navbar-left">
@@ -538,33 +550,36 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div class="navbar-right">
-        <div class="search-bar">
-          <i class="fas fa-search"></i>
+
+      <div className="navbar-right">
+        <div className="search-bar">
+          <i className="fas fa-search"></i>
           <input
             type="text"
             placeholder="Search for products, brands and more"
+            value={searchTerm}
+            onChange={handleSearchChange}
           />
         </div>
-        <a href="#">
-          <div class="icon-text">
-            <i class="fas fa-user icon"></i>
+        <Link to="/profile">
+          <div className="icon-text">
+            <i className="fas fa-user icon"></i>
             <span>Profile</span>
           </div>
-        </a>
-        <a href="#">
-          <div class="icon-text">
-            <i class="fas fa-heart icon"></i>
+        </Link>
+        <Link to="/wishlist">
+          <div className="icon-text">
+            <i className="fas fa-heart icon"></i>
             <span>Wishlist</span>
           </div>
-        </a>
-        <a href="#">
-          <div class="icon-text">
-            <i class="fas fa-shopping-bag icon"></i>
-            <span>Bag</span>
+        </Link>
+        <Link to="/bag">
+          <div className="icon-text">
+            <i className="fas fa-shopping-bag icon"></i>
+            <span>Bag </span>
           </div>
-        </a>
-        </div>
+        </Link>
+      </div>
     </nav>
   )
 }

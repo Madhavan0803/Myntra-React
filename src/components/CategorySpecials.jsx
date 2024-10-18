@@ -54,7 +54,6 @@ function CategorySpecials() {
   }
 
 
-
   return (
     <div class="category-specials">
     <h1>Category Specials</h1>

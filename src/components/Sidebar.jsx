@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ function Sidebar() {
             <a href="#">Wishlist</a>
           </p>
           <p className="side-navbar-link">
-            <a href="#">Bag</a>
+           <Link> <a href="#">Bag</a></Link>
           </p>
         </div>
       </div>
